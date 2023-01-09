@@ -13,9 +13,9 @@ def pass_gen(pass_length) :
         for i in range(int(pass_length)) :
             Rnum1 = random.randrange(4)
             if Rnum1 == 1 or Rnum1 == 0 :
-                password += chars_list[Rnum1][random.randrange(26)]
+                password += chars_list[Rnum1][random.randrange(len(chars_list[Rnum1])-1)]
             elif Rnum1 == 2 :
-                password += chars_list[Rnum1][random.randrange(10)]
+                password += chars_list[Rnum1][random.randrange(len(chars_list[Rnum1])-1)]
             elif Rnum1 == 3 :
-                password += chars_list[Rnum1][random.randrange(31)]
+                password += chars_list[Rnum1][random.randrange(len(chars_list[Rnum1]))-1]
     return password
